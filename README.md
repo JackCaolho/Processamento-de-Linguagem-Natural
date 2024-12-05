@@ -1,70 +1,59 @@
-Processamento de Linguagem Natural com Python
-Este projeto é uma introdução prática ao Processamento de Linguagem Natural (PLN) utilizando Python e bibliotecas populares. O objetivo é explorar técnicas para processar, analisar e classificar textos, além de criar visualizações como nuvens de palavras e gráficos de frequência. O projeto é dividido em duas partes principais, cada uma cobrindo aspectos fundamentais do PLN.
+# Introdução ao Processamento de Linguagem Natural com Python
 
-Estrutura do Projeto
-Parte 1: Explorando e Vetorizando Dados Textuais
-Carga e visualização inicial dos dados:
+Este repositório contém exemplos práticos de como trabalhar com **Processamento de Linguagem Natural (PLN)** utilizando Python, abrangendo desde a exploração de dados textuais até a construção de modelos de aprendizado de máquina.
 
-Os dados são carregados a partir de um arquivo CSV contendo resenhas de filmes, classificadas como positivas ou negativas.
-Visualização de exemplos de resenhas e análise do balanceamento de classes.
-Vetorização com CountVectorizer:
+## Estrutura do Projeto
 
-Demonstração do conceito de bag-of-words.
-Conversão de textos para representações numéricas para classificação.
-Divisão de dados e treinamento:
+### Parte 1: Explorando e Vetorizando Dados Textuais
+- **Objetivo**: Introduzir conceitos básicos de PLN, como a vetorização de textos utilizando `CountVectorizer`.
+- **Passos principais**:
+  - Carregar e explorar um dataset de resenhas de filmes.
+  - Transformar dados textuais em representações vetoriais (Bag of Words).
+  - Construir um modelo de Regressão Logística para classificar sentimentos.
 
-Divisão dos dados em conjuntos de treino e teste.
-Treinamento de um modelo de regressão logística para classificação de sentimentos.
-Visualização com WordCloud:
+### Parte 2: Visualizações e Pré-Processamento de Dados Textuais
+- **Objetivo**: Explorar visualizações e técnicas de tokenização.
+- **Passos principais**:
+  - Gerar nuvens de palavras para sentimentos positivos e negativos.
+  - Tokenizar textos e identificar palavras mais frequentes.
+  - Implementar pipelines para limpar e processar dados textuais.
 
-Geração de nuvens de palavras para análises qualitativas.
-Comparação entre resenhas positivas e negativas.
-Tokenização:
+### Parte 3: Normalização e Otimização
+- **Objetivo**: Aprimorar a análise textual através de técnicas de normalização.
+- **Passos principais**:
+  - Remoção de acentos e pontuações.
+  - Criação de representações textuais otimizadas para modelos.
+  - Comparação de resultados entre diferentes níveis de tratamento.
 
-Segmentação de frases em palavras utilizando nltk.tokenize.
-Parte 2: Otimizando o Pré-processamento e a Análise
-Refinamento de tokens e remoção de stopwords:
+## Requisitos
 
-Remoção de palavras irrelevantes (stopwords) e pontuação para melhoria da análise.
-Normalização de textos:
+### Dependências
+Certifique-se de ter as seguintes bibliotecas instaladas:
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `scikit-learn`
+- `nltk`
+- `wordcloud`
+- `unidecode`
 
-Remoção de acentos e conversão para caixa baixa.
-Funções para pipeline:
+### Dataset
+O projeto utiliza um dataset de resenhas de filmes, disponível no diretório `dados/`:
+- `imdb-reviews-pt-br.csv`: Contém colunas com texto das resenhas (`text_pt`) e sentimentos (`sentiment`).
 
-Criação de funções reutilizáveis para visualizações (nuvens de palavras, gráficos de Pareto) e classificação.
-Avaliação de modelos:
+## Principais Visualizações
 
-Teste e comparação de modelos utilizando textos pré-processados.
-Dependências
-Linguagem: Python 3.x
-Bibliotecas:
-pandas
-nltk
-scikit-learn
-wordcloud
-matplotlib
-seaborn
-unidecode
-Instale as dependências com:
+### Nuvens de Palavras
+Geramos nuvens de palavras para identificar os termos mais frequentes em textos classificados como:
+- **Positivos**
+- **Negativos**
 
-bash
-Copiar código
-pip install pandas nltk scikit-learn wordcloud matplotlib seaborn unidecode
-Como Executar
-Baixe os dados:
+### Gráficos de Pareto
+Barplot das palavras mais frequentes, com possibilidade de customizar o número de palavras exibidas.
 
-Certifique-se de que o arquivo imdb-reviews-pt-br.csv está na pasta dados/.
-Execute o script:
+## Como Usar
 
-Utilize um ambiente como Jupyter Notebook ou qualquer IDE que suporte execução de células.
-Resultados esperados:
-
-Nuvens de palavras para insights visuais.
-Gráficos de frequência para análise de Pareto.
-Precisão dos modelos de classificação de sentimentos.
-Contribuições
-Sinta-se à vontade para:
-
-Reportar problemas.
-Melhorar o pipeline de pré-processamento.
-Sugerir novos modelos ou abordagens para classificação de sentimentos.
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/JackCaolho/Processamento-de-Linguagem-Natural.git
